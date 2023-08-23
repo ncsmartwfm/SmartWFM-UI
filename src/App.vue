@@ -1,20 +1,19 @@
 <template>
   <div id="App">
-<!--    <Employee />-->
+<!--    <Candidate />-->
     <Login />
   </div>
 </template>
 
 <script>
 /*
-import Employee from './components/Employee.vue'
+import Candidate from './components/Candidate.vue'
 */
 import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   components: {
-    //Employee,
     Login
   }
 }
