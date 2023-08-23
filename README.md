@@ -1,24 +1,32 @@
-# smartwfm-ui
+# SmartWFM-UI
+UI part of SmartWFM
 
-## Project setup
+Please install npm.
+
+Open CMD as a Administrator.
+And run below command to install VUE cli.
+
+### VUE CLI setup
 ```
-npm install
+npm install -g @vue/cli
 ```
 
-### Compiles and hot-reloads for development
+Then run below in checked out directory
+### Compile/Hot Reload for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Other NPM Commands just for info. 
+
+#### Compiles and minifies for production
 ```
 npm run build
 ```
-
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
+#### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
