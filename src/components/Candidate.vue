@@ -20,10 +20,10 @@
     </div>
 </template>
 
-<script>
+<script type="module">
 import CandidateService from '../services/CandidateService'
     export default {
-        name: 'Candidates',
+        name: 'Candidate-component',
         data(){
             return {
                 candidates : []
