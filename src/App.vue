@@ -19,7 +19,7 @@ export default {
     Login,
     Candidate,
     CandidateForm,
-    Demands,
+    Demands
   }
 }
 </script>
