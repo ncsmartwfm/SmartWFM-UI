@@ -2,18 +2,22 @@
   <div id="App">
     <Candidate />
     <Login />
+    <Demands />
   </div>
 </template>
 
 <script>
 import Candidate from './components/Candidate.vue'
 import Login from './components/Login.vue'
+import Demands from './components/Demands.vue'
+
 
 export default {
   name: 'App',
   components: {
     Login,
-    Candidate
+    Candidate,
+    Demands
   }
 }
 </script>
