@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import LineManagerService from '../services/LineManagerService'
+import DemandsService from '../services/DemandsService'
     export default {
         name: 'Demands-component',
         data(){
@@ -38,7 +38,7 @@ import LineManagerService from '../services/LineManagerService'
         },
         methods: {
             getOpenDemands(){
-                LineManagerService.getOpenDemands().then((response) => {
+                DemandsService.getOpenDemands().then((response) => {
                     this.demands = response.data;
                 }
                 );
