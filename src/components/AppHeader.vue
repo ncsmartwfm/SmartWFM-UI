@@ -11,7 +11,7 @@
     </header>
   </template>
 
-<style lang="scss">
+<style>
 header {
   display: flex;
   border-bottom: 1px solid #ccc;

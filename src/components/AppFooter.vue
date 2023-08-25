@@ -1,15 +1,8 @@
 <template>
     <footer>
-      <p>Netcracker Copyright &copy; "current year" </p>
+      <p>Netcracker Copyright &copy;2023 </p>
     </footer>
   </template>
 
 <script>
-import { computed } from 'vue'
-
-export default {
-  setup () {
-    const year = computed(() => new Date().getFullYear())
-  }
-}
 </script>

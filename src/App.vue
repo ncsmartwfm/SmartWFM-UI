@@ -12,7 +12,6 @@
 
 <script>
 import AppHeader from '@/components/AppHeader.vue'
-
 import Login from './components/Login.vue'
 import Candidate from './components/Candidate.vue'
 import CandidateForm from './components/CandidateForm.vue'
@@ -25,7 +24,9 @@ export default {
     Login,
     Candidate,
     CandidateForm,
-    Demands
+    Demands,
+    AppHeader,
+    AppFooter
   }
 }
 </script>
