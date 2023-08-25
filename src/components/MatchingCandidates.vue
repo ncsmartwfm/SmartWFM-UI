@@ -14,6 +14,7 @@
                 <th>Line Manager Email Id</th>                
                 <th>Country</th>
                 <th>City</th>
+                <th>Matched</th>
             </thead>
             <tbody>
                 <tr v-for="candidate in candidates" v-bind:key="candidate.id">
@@ -28,7 +29,15 @@
                     <td>{{candidate.lineManagerEmailId}}</td>                    
                     <td>{{candidate.country}}</td>
                     <td>{{candidate.city}}</td>
+                    <!--<td><button v-on:click="getMatches(candidate.demandCandidateMatch)">Check Matches</button></td>-->
+                    <td>
+    <h3 v-for="demandCandidateMatch in candidate.demandCandidateMatch" :key="demandCandidateMatch.Id">
+      Candidate Id:  {{demandCandidateMatch.candidateId}}
+      Demand Id:{{demandCandidateMatch.matchPercentage}}
+      Match percentage:{{demandCandidateMatch.demandId}}
+    </h3>
 
+                    </td>
                 </tr>
             </tbody>
         </table>
