@@ -1,42 +1,22 @@
 <template>
-  <AppHeader/>
-  <div id="App">
-    <Login/>
-    <Candidate/>
-    <CandidateForm/>
-    <Demands/>
+  <div class="vue-tempalte">
+    <!-- Navigation -->
+    <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
+      <div class="container">
+        <ul class="nav navbar-nav flex-row float-right">
+          <li class="nav-item">
+            <img src="assets/logo.png" alt="Netcracker">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Main -->
+    <div class="App">
+      <div class="vertical-center">
+        <div class="inner-block">
+          <router-view/>
+        </div>
+      </div>
+    </div>
   </div>
-  <AppFooter/>
 </template>
-
-<script>
-import AppHeader from '@/components/AppHeader.vue'
-import Login from './components/Login.vue'
-import Candidate from './components/Candidate.vue'
-import CandidateForm from './components/CandidateForm.vue'
-import Demands from './components/Demands.vue'
-import AppFooter from '@/components/AppFooter.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Login,
-    Candidate,
-    CandidateForm,
-    Demands,
-    AppHeader,
-    AppFooter
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

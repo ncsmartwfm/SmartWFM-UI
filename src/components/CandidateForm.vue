@@ -23,7 +23,6 @@
         <div v-if="errors.password" class="invalid-feedback">{{ errors.password }}</div>
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
-      <p class="forgot-password-link">Forgot your password? <a href="#">Click here</a></p>
     </form>
   </div>
 </template>
@@ -226,20 +225,5 @@ body {
 .invalid-feedback {
   font-size: 0.8rem;
   color: var(--danger-color);
-}
-
-.forgot-password-link {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.forgot-password-link a {
-  color: #333;
-  text-decoration: underline;
-}
-
-.forgot-password-link a:hover {
-  text-decoration: none;
 }
 </style>
