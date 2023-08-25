@@ -47,7 +47,7 @@ import CandidateService from '../services/CandidateService'
         },
         methods: {
             listCandidates(){
-                CandidateService.getAvailableResources().then((response) => {
+                CandidateService.getCandidates().then((response) => {
                     this.candidates = response.data;
                 }
                 );

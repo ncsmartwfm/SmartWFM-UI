@@ -1,13 +1,12 @@
 <template>
-  <app-header />
-  <router-view/>
+  <AppHeader/>
   <div id="App">
-    <Login />
+    <Login/>
     <Candidate/>
     <CandidateForm/>
-    <Demands />
+    <Demands/>
   </div>
-  <app-footer />
+  <AppFooter/>
 </template>
 
 <script>
