@@ -10,7 +10,7 @@
         <label>Password</label>
         <input type="password" class="form-control form-control-lg"/>
       </div>
-      <router-link class="btn btn-outline-primary" to="/candidate">Sign in</router-link>
+      <router-link class="btn btn-outline-primary" to="/line-manager">Sign in</router-link>
     </form>
   </div>
 </template>

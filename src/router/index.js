@@ -13,7 +13,15 @@ const routes = [
         name: 'signup',
         component: () => import('../components/Signup.vue')
     },{
-        path: '/candidate',
+        path: '/line-manager',
+        name: 'LMScreen',
+        component: () => import('../components/LMScreen.vue')
+    },{
+        path: '/candidate/add/',
+        name: 'LMScreen',
+        component: () => import('../components/CandidateForm.vue')
+    },{
+        path: '/candidate/view',
         name: 'candidate',
         component: () => import('../components/Candidate.vue')
     }

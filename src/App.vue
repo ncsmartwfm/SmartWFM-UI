@@ -5,6 +5,11 @@
       <div class="container">
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item">
+            Welcome to Smart WFM
+            </li>
+        </ul>
+      <ul class="nav navbar-nav flex-row float-right">
+          <li class="nav-item">
             <img src="assets/logo.png" alt="Netcracker">
           </li>
         </ul>
