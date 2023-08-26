@@ -26,8 +26,9 @@
                     <!-- <td>{{candidate.country}}</td>
                     <td>{{candidate.city}}</td> -->
                     <!-- <td><button v-on:click="getMatchedCandidates()">Matching Demands</button></td> -->
-                    <router-link class="btn btn-outline-primary" to="/matchingcandidates">Matching Demands</router-link>
-
+                    <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
+                    <td><button v-on:click="getMatchedCandidates(candidate.candidateId)">Matching Demands</button></td>
+                    
                 </tr>
             </tbody>
         </table>
@@ -36,9 +37,10 @@
 
 <script type="module">
 import CandidateService from '../services/CandidateService'
-import MatchingCandidateService from '../services/MatchingCandidatesService'
+import MatchingCandidatesService from '../services/MatchingCandidatesService'
     export default {
         name: 'Candidate-component',
+        props: ['myprop'],
         data(){
             return {
                 candidates : []
@@ -52,12 +54,18 @@ import MatchingCandidateService from '../services/MatchingCandidatesService'
                 }
                 );
             },
-            getMatchedCandidates(){
-                console.log("Test Match")
-                MatchingCandidateService.getMatchedCandidates().then((response) => {
-                    this.candidates = response.data;
-                }
-                );
+            getMatchedCandidates(id){
+                //console.log("Test Match"+id)
+                //MatchingCandidateService.getMatchedCandidates().then((response) => {
+                  //  this.candidates = response.data;
+                //}
+                //);
+                //myprop = id;
+                //this.$router.replace({name:'matchedcandidates', params:{myprop}});
+                this.$router.push({
+                      name: 'matchedcandidates',
+                      params: {myProperty: id}
+                    })
             }
         },
         created() {

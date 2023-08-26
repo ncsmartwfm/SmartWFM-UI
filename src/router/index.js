@@ -21,7 +21,7 @@ const routes = [
         component: () => import('../components/CandidateForm.vue')
     },{
         path: '/candidate/view',
-        name: 'candidate',
+        name: 'candidate',        
         component: () => import('../components/Candidate.vue')
     },{
         path: '/demand/add/',
@@ -33,9 +33,9 @@ const routes = [
         component: () => import('../components/Demands.vue')
     },
     {
-        path: '/matchingcandidates',
-        name: 'matchingcandidates',
-        component: () => import('../components/MatchingCandidates.vue')
+        path: '/matchedcandidates',
+        name: 'matchedcandidates',
+        component: () => import('../components/MatchedCandidates.vue')
     }
 ]
 const router = new VueRouter({
