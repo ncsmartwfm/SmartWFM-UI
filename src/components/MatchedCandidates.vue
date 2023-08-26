@@ -17,7 +17,7 @@
                     <td>{{demandCandidateMatch.projectName}}</td>
                     <td>{{demandCandidateMatch.projectRole}}</td>
                     <td>{{demandCandidateMatch.matchPercentage}}</td>
-                    <td><button>Recommend</button></td>
+                    <td><button v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
                 </tr>
             </tbody>
         </table>
@@ -27,6 +27,7 @@
 <script type="module">
 //import MatchedCandidatesService from '../services/MatchedCandidatesService'
 import MatchingCandidatesService from '../services/MatchingCandidatesService'
+import RecommendService from '../services/LM/RecommendService'
 
 export default {
         name: 'MatchedCandidate-component',
@@ -43,6 +44,13 @@ export default {
                 console.log("Test Match"+this.$route.params.myProperty)
                 MatchingCandidatesService.getMatchedCandidate(this.$route.params.myProperty).then((response) => {
                     this.matchedCandidates = response.data;
+                }
+                );
+            },
+            updateRecommendation(demandCandidateMatch){
+                console.log(demandCandidateMatch.projectName);
+                RecommendService.updateRecommendation(demandCandidateMatch).then((response) => {
+                this.matchedCandidates = response.data;
                 }
                 );
             }
