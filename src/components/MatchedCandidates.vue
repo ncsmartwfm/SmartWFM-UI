@@ -17,7 +17,7 @@
                     <td custom-table td>{{demandCandidateMatch.firstName}} {{demandCandidateMatch.lastName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectRole}}</td>
-                    <td custom-table td>{{demandCandidateMatch.matchPercentage}}</td>
+                    <td custom-table td>{{demandCandidateMatch.match}}</td>
                     <td custom-table td><button class="dark-blue-button">Recommend</button></td>
                 </tr>
             </tbody>
