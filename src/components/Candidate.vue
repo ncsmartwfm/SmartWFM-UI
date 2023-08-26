@@ -18,7 +18,7 @@
                 <tr v-for="candidate in candidates" v-bind:key="candidate.id">
                     <td>{{candidate.firstName}} {{candidate.lastName}}</td>                    
                     
-                    <td>{{candidate.emailId}}</td>
+                    <td>{{candidate.candidateEmailId}}</td>
                     <!--<td>{{candidate.yearsOfExperience}}</td>
                     <td>{{candidate.yearOfExperienceInCurrentDomain}}</td>-->
                     

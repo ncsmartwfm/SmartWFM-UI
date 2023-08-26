@@ -3,7 +3,7 @@ import axios from "axios"
 const API_BASE_URL = 'http://10.230.24.183:8080'
 
 class RecommendService {
-    async updateRecommendation(demandCandidateMatch){
+    updateRecommendation(demandCandidateMatch){
         return axios.put('http://10.230.24.183:8080/candidates/match', demandCandidateMatch);
 
     //     return axios.put(API_BASE_URL+'candidates/match', 

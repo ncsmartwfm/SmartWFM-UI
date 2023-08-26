@@ -16,7 +16,7 @@
                     <td>{{demandCandidateMatch.firstName}} {{demandCandidateMatch.lastName}}</td>
                     <td>{{demandCandidateMatch.projectName}}</td>
                     <td>{{demandCandidateMatch.projectRole}}</td>
-                    <td>{{demandCandidateMatch.matchPercentage}}</td>
+                    <td>{{demandCandidateMatch.match}}</td>
                     <td><button v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
                 </tr>
             </tbody>
