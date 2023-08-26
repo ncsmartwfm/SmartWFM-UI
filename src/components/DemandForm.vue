@@ -55,8 +55,7 @@ export default {
         ],
         'desiredYearsOfExperience': 0,
         'domain': '',
-        'location': '',
-        'desiredLocation': ''
+        'desiredLocations': ''
       }
     };
   },
@@ -64,6 +63,7 @@ export default {
     async submitForm() {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       this.formData.desiredSkillSet = this.formData.desiredSkillSet.split(',');
+      this.formData.desiredLocations = this.formData.desiredLocations.split(',');
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       const response = await axios.post('http://10.230.24.183:8080/demands', this.formData);
       console.log('Response:', response.data);

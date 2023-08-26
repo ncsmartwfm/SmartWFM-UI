@@ -36,7 +36,7 @@ const routes = [
             component: DemandForm
         }, {
             path: '/demand/view',
-            name: 'candidate',
+            name: 'viewdemands',
             component: Demands
         }]
     },
