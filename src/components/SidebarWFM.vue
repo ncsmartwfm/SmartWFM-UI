@@ -1,12 +1,12 @@
 <template>
     <div class="sidebar">
         <div class="menu-items">
-            <router-link to="/WFM/candidate/view" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/wfm/candidate/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
                   View Available Candidates
                 </div>
             </router-link>
-            <router-link to="/WFM/demand/view" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/wfm/demand/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
                   View Available Demands
                 </div>

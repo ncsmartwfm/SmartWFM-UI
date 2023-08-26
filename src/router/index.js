@@ -48,9 +48,13 @@ const routes = [
         name: 'WFMScreen',
         component: () => import('../components/WFMScreen.vue'),
         children: [{
-            path: '/wfm-candidate/view/',
-            name: 'WFM',
+            path: '/wfm/candidate/view/',
+            name: 'WFM-Candidate-View',
             component: () => import('../components/CandidatesWFM.vue')
+        },{
+            path: '/wfm/demand/view/',
+            name: 'WFM-Demand-View',
+            component: () => import('../components/DemandsWFM.vue')
         }]
     }
 ]
