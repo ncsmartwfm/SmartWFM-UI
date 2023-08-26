@@ -24,6 +24,11 @@
                   View Added Demands
                 </div>
             </router-link>
+          <router-link to="/" active-class="active" tag="button" exact class="side-btn">
+                <div class="link-container">
+                  Sign Out
+                </div>
+            </router-link>
         </div>
     </div>
 </template>

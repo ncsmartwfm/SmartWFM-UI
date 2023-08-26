@@ -43,8 +43,16 @@ const routes = [
             name: 'matchedcandidates',
             component: () => import('../components/MatchedCandidates.vue')
         }]
+    }, {
+        path: '/work-force-manager',
+        name: 'WFMScreen',
+        component: () => import('../components/WFMScreen.vue'),
+        children: [{
+            path: '/wfm-candidate/view/',
+            name: 'WFM',
+            component: () => import('../components/WFMViewCandidate.vue')
+        }]
     }
-   
 ]
 const router = new VueRouter({
     mode: 'history',

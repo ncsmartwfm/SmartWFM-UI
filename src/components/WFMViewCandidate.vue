@@ -40,7 +40,7 @@
 <script type="module">
 import CandidateService from '../services/CandidateService'
     export default {
-        name: 'Candidate-component',
+        name: 'WFM-Candidate-component',
         data(){
             return {
                 candidates : []

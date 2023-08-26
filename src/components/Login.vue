@@ -39,10 +39,11 @@ export default {
       console.log('Response:', response);
       console.log('Response:', response.data);
       if (response.status === 200) {
-        //roles = ['LM', 'DO', 'WFM'];
         if (response.data.includes('LM')) {
-          await this.$router.push({name: 'LMScreen'});
+          await this.$router.push({name: 'LMScreen'}); //['LM', 'DO', 'WFM']
         }
+      } else {
+        alert("Incorrect Email or Password.");
       }
     }
   }

@@ -76,9 +76,7 @@ export default {
         'firstName': '',
         'lastName': '',
         'domain': '',
-        'skillSet': [
-          ''
-        ],
+        'skillSet':'',
         'yearsOfExperience': 0,
         'yearOfExperienceInCurrentDomain': 0,
         'candidateEmailId': '',
@@ -97,7 +95,9 @@ export default {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       const response = await axios.post('http://10.230.24.183:8080/candidates', this.formData);
       console.log('Response:', response.data);
-
+      if (response.status === 200) {
+          await this.$router.push({name: 'candidate'});
+      }
     }
   }
 };
