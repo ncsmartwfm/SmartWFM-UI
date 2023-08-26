@@ -3,25 +3,38 @@
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
       <div class="container">
-        <ul class="nav navbar-nav flex-row float-right">
-          <li class="nav-item">
-            Welcome to Smart WFM
-            </li>
-        </ul>
-      <ul class="nav navbar-nav flex-row float-right">
-          <li class="nav-item">
-            <img src="assets/logo.png" alt="Netcracker">
-          </li>
-        </ul>
+        <img src="./assets/logo.png" alt="Netcracker">
       </div>
     </nav>
     <!-- Main -->
     <div class="App">
-      <div class="vertical-center">
-        <div class="inner-block">
-          <router-view/>
-        </div>
-      </div>
+      <router-view/>
+
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+
+<style>
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+</style>

@@ -1,37 +1,36 @@
 <template>
-    <div class="container">
-      <h5>Options for Line Manager</h5>
-      <br/>
-      <ul class="nav navbar-nav flex-row float-right">
-        <li class="nav-item">
-          <router-link class="btn btn-outline-primary" to="/candidate/add">Add Available Candidate</router-link>
-        </li>
-        <br/>
-        <br/>
-        <li class="nav-item">
-          <router-link class="btn btn-outline-primary" to="/candidate/view">View Added Candidates</router-link>
-        </li>
-        <br/>
-        <br/>
-        <br/>
-        <li class="nav-item">
-          <router-link class="btn btn-outline-primary" to="/demand/add">Add Demand</router-link>
-        </li>
-        <br/>
-        <br/>
-        <li class="nav-item">
-          <router-link class="btn btn-outline-primary" to="/demand/view">View Added Demands</router-link>
-        </li>
-      </ul>
+  <div class="dashboard">
+    <Sidebar/>
+    <div class="content">
+      <router-view/>
     </div>
+  </div>
+
 </template>
 
 <script>
+
+import Sidebar from "@/components/Sidebar.vue";
+
 export default {
-  name: "LMScreen"
+  name: "LMScreen",
+  components: {Sidebar}
 }
 </script>
 
-<style scoped>
 
+<style>
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: #08b9e6;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  background-color: white;
+  border-radius: 10px;
+  margin: 6px 6px 6px 0px;
+}
 </style>

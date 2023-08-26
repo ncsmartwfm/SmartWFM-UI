@@ -1,5 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import LMScreen from "@/components/LMScreen.vue";
+import Signup from "@/components/Signup.vue";
+import Login from "@/components/Login.vue";
+import CandidateForm from "@/components/CandidateForm.vue";
+import Candidate from "@/components/Candidate.vue";
+import DemandForm from "@/components/DemandForm.vue";
+import Demands from "@/components/Demands.vue";
 
 Vue.use(VueRouter)
 const routes = [
@@ -11,26 +18,27 @@ const routes = [
         path: '/signup',
         name: 'signup',
         component: () => import('../components/Signup.vue')
-    },{
+    }, {
         path: '/line-manager',
         name: 'LMScreen',
-        component: () => import('../components/LMScreen.vue')
-    },{
-        path: '/candidate/add/',
-        name: 'LMScreen',
-        component: () => import('../components/CandidateForm.vue')
-    },{
-        path: '/candidate/view',
-        name: 'candidate',        
-        component: () => import('../components/Candidate.vue')
-    },{
-        path: '/demand/add/',
-        name: 'demand',
-        component: () => import('../components/DemandForm.vue')
-    },{
-        path: '/demand/view',
-        name: 'candidate',
-        component: () => import('../components/Demands.vue')
+        component: () => import('../components/LMScreen.vue'),
+        children: [{
+            path: '/candidate/add/',
+            name: 'CandidateForm',
+            component: () => import('../components/CandidateForm.vue')
+        }, {
+            path: '/candidate/view',
+            name: 'candidate',
+            component: Candidate
+        }, {
+            path: '/demand/add/',
+            name: 'demand',
+            component: DemandForm
+        }, {
+            path: '/demand/view',
+            name: 'candidate',
+            component: Demands
+        }]
     },
     {
         path: '/matchedcandidates',
