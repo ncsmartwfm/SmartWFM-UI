@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-      <h3>Add Candidate</h3>
+      <h5>Options for Line Manager</h5>
+      <br/>
       <ul class="nav navbar-nav flex-row float-right">
         <li class="nav-item">
           <router-link class="btn btn-outline-primary" to="/candidate/add">Add Available Candidate</router-link>
