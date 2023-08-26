@@ -50,7 +50,7 @@ const routes = [
         children: [{
             path: '/wfm-candidate/view/',
             name: 'WFM',
-            component: () => import('../components/WFMViewCandidate.vue')
+            component: () => import('../components/CandidatesWFM.vue')
         }]
     }
 ]

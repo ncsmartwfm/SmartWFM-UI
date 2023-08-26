@@ -76,7 +76,7 @@ export default {
         'firstName': '',
         'lastName': '',
         'domain': '',
-        'skillSet':'',
+        'skillSet': '',
         'yearsOfExperience': 0,
         'yearOfExperienceInCurrentDomain': 0,
         'candidateEmailId': '',
@@ -90,13 +90,18 @@ export default {
   },
   methods: {
     async submitForm() {
-      console.log('Form submitted with data:', JSON.stringify(this.formData));
-      this.formData.skillSet = this.formData.skillSet.split(',');
-      console.log('Form submitted with data:', JSON.stringify(this.formData));
-      const response = await axios.post('http://10.230.24.183:8080/candidates', this.formData);
-      console.log('Response:', response.data);
-      if (response.status === 200) {
+      try {
+        console.log('Form submitted with data:', JSON.stringify(this.formData));
+        this.formData.skillSet = this.formData.skillSet.split(',');
+        console.log('Form submitted with data:', JSON.stringify(this.formData));
+        const response = await axios.post('http://10.230.24.183:8080/candidates', this.formData);
+        console.log('Response:', response);
+        if (response.status === 201) {
+          alert ("Record Added Successfully.")
           await this.$router.push({name: 'candidate'});
+        }
+      } catch (error) {
+        console.error('API Error:', error);
       }
     }
   }

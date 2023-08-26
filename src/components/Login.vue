@@ -35,15 +35,23 @@ export default {
   methods: {
     async submitForm() {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
-      const response = await axios.get('http://10.230.24.183:8080/users?emailId=' + this.formData.emailId + '&password=' + this.formData.password);
-      console.log('Response:', response);
-      console.log('Response:', response.data);
-      if (response.status === 200) {
-        if (response.data.includes('LM')) {
-          await this.$router.push({name: 'LMScreen'}); //['LM', 'DO', 'WFM']
+      try {
+        const response = await axios.get('http://10.230.24.183:8080/users?emailId=' + this.formData.emailId + '&password=' + this.formData.password);
+        console.log('Response:', response);
+        console.log('Response:', response.data);
+        if (response.status === 200) {
+          /*if (response.data.includes('LM')) {
+            await this.$router.push({name: 'LMScreen'}); //['LM', 'DO', 'WFM']
+          }
+          if (response.data.includes('WFM')) {*/
+            await this.$router.push({path: '/work-force-manager'}); //['LM', 'DO', 'WFM']
+          //}
+        } else {
+          alert("Incorrect Email or Password.");
         }
-      } else {
+      } catch (error) {
         alert("Incorrect Email or Password.");
+        console.error('API Error:', error);
       }
     }
   }

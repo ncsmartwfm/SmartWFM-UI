@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <Sidebar/>
+    <SidebarWFM/>
     <div class="content">
       <router-view/>
     </div>
@@ -9,12 +9,11 @@
 </template>
 
 <script>
-
-import Sidebar from "@/components/Sidebar.vue";
+import SidebarWFM from "@/components/SidebarWFM.vue";
 
 export default {
   name: "WFMScreen",
-  components: {Sidebar}
+  components: {SidebarWFM}
 }
 </script>
 
