@@ -56,6 +56,15 @@ const routes = [
             name: 'WFM-Demand-View',
             component: () => import('../components/DemandsWFM.vue')
         }]
+    }, {
+        path: '/admin-user',
+        name: 'AdminScreen',
+        component: () => import('../components/AdminScreen.vue'),
+        children: [{
+            path: '/profile/add/',
+            name: 'userprofile',
+            component: () => import('../components/UserProfileForm.vue')
+        }]
     }
 ]
 const router = new VueRouter({

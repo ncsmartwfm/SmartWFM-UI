@@ -18,7 +18,8 @@
                     <td custom-table td>{{demandCandidateMatch.projectName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectRole}}</td>
                     <td custom-table td>{{demandCandidateMatch.match}}</td>
-                    <td custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
+                    <td v-if="demandCandidateMatch.recommendation" custom-table td>Recommended</td>
+                    <td v-else="demandCandidateMatch.recommendation" custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
                 </tr>
             </tbody>
         </table>
