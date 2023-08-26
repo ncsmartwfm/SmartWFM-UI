@@ -5,7 +5,7 @@
         <h3>Add Candidate</h3>
         <form @submit.prevent="submitForm">
           <div class="form-group">
-            <label>Candidate Domain ID</label>
+            <label>Candidate NC ID</label>
             <input type="text" class="input-field" v-model="formData.candidateId" required/>
           </div>
           <div class="form-group">
@@ -38,7 +38,7 @@
             <input type="email" class="input-field" v-model="formData.candidateEmailId" required/>
           </div>
           <div>
-            <label>LM Domain ID</label>
+            <label>LM NC ID</label>
             <input type="text" class="input-field" v-model="formData.lineManagerOfficialId" required/>
           </div>
           <div>
