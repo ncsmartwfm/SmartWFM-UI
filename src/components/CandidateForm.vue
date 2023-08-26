@@ -33,7 +33,7 @@
       </div>
       <div>
         <label>Email</label>
-        <input type="text" class="form-control form-control-lg" v-model="formData.candidateEmailId" required/>
+        <input type="email" class="form-control form-control-lg" v-model="formData.candidateEmailId" required/>
       </div>
       <div>
         <label>LM ID</label>
@@ -45,7 +45,7 @@
       </div>
       <div>
         <label>LM Email</label>
-        <input type="text" class="form-control form-control-lg" v-model="formData.lineManagerEmailId" required/>
+        <input type="email" class="form-control form-control-lg" v-model="formData.lineManagerEmailId" required/>
       </div>
       <div>
         <label>Country</label>
