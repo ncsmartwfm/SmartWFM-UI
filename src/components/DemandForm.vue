@@ -29,12 +29,8 @@
             <input type="text" class="form-control form-control-lg" v-model="formData.domain" required/>
           </div>
           <div class="form-group">
-            <label>Location</label>
-            <input type="text" class="form-control form-control-lg" v-model="formData.location" required/>
-          </div>
-          <div class="form-group">
-            <label>Desired Location</label>
-            <input type="text" class="form-control form-control-lg" v-model="formData.desiredLocation" required/>
+            <label>Desired Locations (Comma separted) </label>
+            <input type="text" class="form-control form-control-lg" v-model="formData.desiredLocations" required/>
           </div>
           <button class="btn btn-outline-primary" type="submit">Submit
           </button>
@@ -60,8 +56,7 @@ export default {
         ],
         'desiredYearsOfExperience': 0,
         'domain': '',
-        'location': '',
-        'desiredLocation': ''
+        'desiredLocations': ''
       }
     };
   },
@@ -69,6 +64,7 @@ export default {
     async submitForm() {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       this.formData.desiredSkillSet = this.formData.desiredSkillSet.split(',');
+      this.formData.desiredLocations = this.formData.desiredLocations.split(',');
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       const response = await axios.post('http://10.230.24.183:8080/demands', this.formData);
       console.log('Response:', response.data);
