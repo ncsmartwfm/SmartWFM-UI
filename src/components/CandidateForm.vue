@@ -103,8 +103,30 @@ export default {
 };
 </script>
 
-
 <style scoped>
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-form {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #1ba0ecda;
+  border-radius: 4px;
+  font-size: 14px;
+}
 
 .dark-blue-button {
   background-color: rgb(8, 185, 230);
@@ -116,55 +138,9 @@ export default {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
+
 .dark-blue-button:hover {
   background-color: rgb(11, 87, 226);
 }
-/* Style for the table container */
-.table-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Styling for the table */
-.custom-table {
-  margin-top: 2em;
-  width: 70%;
-  border-collapse: collapse;
-  margin: 20px auto;
-  background-color: lightblue;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.custom-table th,
-.custom-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Styling for odd rows */
-.custom-table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-
-/* Styling for row hover */
-.custom-table tbody tr:hover {
-  background-color: #e0e0e0;
-}
-
-/* Styling for the action button */
-.action-button {
-  background-color: rgb(8, 185, 230);
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
 </style>
 

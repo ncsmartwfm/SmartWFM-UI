@@ -38,13 +38,13 @@ const routes = [
             path: '/demand/view',
             name: 'viewdemands',
             component: Demands
+        }, {
+            path: '/matchedcandidates',
+            name: 'matchedcandidates',
+            component: () => import('../components/MatchedCandidates.vue')
         }]
-    },
-    {
-        path: '/matchedcandidates',
-        name: 'matchedcandidates',
-        component: () => import('../components/MatchedCandidates.vue')
     }
+   
 ]
 const router = new VueRouter({
     mode: 'history',
