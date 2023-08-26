@@ -18,7 +18,7 @@
                     <td custom-table td>{{demandCandidateMatch.projectName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectRole}}</td>
                     <td custom-table td>{{demandCandidateMatch.match}}</td>
-                    <td custom-table td><button class="dark-blue-button">Recommend</button></td>
+                    <td custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
                 </tr>
             </tbody>
         </table>
@@ -29,7 +29,7 @@
 //import MatchedCandidatesService from '../services/MatchedCandidatesService'
 import MatchingCandidatesService from '../services/MatchingCandidatesService'
 import RecommendService from '../services/LM/RecommendService'
-
+//recommend = false
 export default {
         name: 'MatchedCandidate-component',
         //props: ['myprop'],
@@ -52,13 +52,22 @@ export default {
                 console.log(demandCandidateMatch.projectName);
                 RecommendService.updateRecommendation(demandCandidateMatch).then((response) => {
                 this.matchedCandidates = response.data;
+                
                 }
                 );
+                
             }
         },
         created() {
             this.getMatchedCandidates()
         }
+    //     ,
+    //     mounted(){
+    //         if(this.matchedCandidates.recommendation){
+    //             recommend = true;
+    //             this.getMatchedCandidates();
+    //         }
+    //  }
     }
 
 </script>
