@@ -45,7 +45,7 @@
 </template>
 
 <script type="module">
-import MatchingCandidateService from '../services/MatchingCandidateService'
+import MatchingCandidateService from '../services/MatchingCandidatesService'
     export default {
         name: 'MatchingCandidate-component',
         data(){
@@ -55,15 +55,15 @@ import MatchingCandidateService from '../services/MatchingCandidateService'
             
         },
         methods: {
-            getMatchedCandidates(id){
-                MatchingCandidateService.getMatchedCandidates(id).then((response) => {
+            getMatchedCandidates(){
+                MatchingCandidateService.getMatchedCandidates().then((response) => {
                     this.candidates = response.data;
                 }
                 );
             }
         },
         created() {
-            this.getMatchedCandidates(id)
+            this.getMatchedCandidates()
         }
     }
 </script>
