@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 const routes = [
-
     {
         path: '/',
         name: 'login',
@@ -24,8 +23,15 @@ const routes = [
         path: '/candidate/view',
         name: 'candidate',
         component: () => import('../components/Candidate.vue')
+    },{
+        path: '/demand/add/',
+        name: 'demand',
+        component: () => import('../components/DemandForm.vue')
+    },{
+        path: '/demand/view',
+        name: 'candidate',
+        component: () => import('../components/Demands.vue')
     },
-    ,
     {
         path: '/matchingcandidates',
         name: 'matchingcandidates',

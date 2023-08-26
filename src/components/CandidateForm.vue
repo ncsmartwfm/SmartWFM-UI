@@ -66,7 +66,7 @@ Add<!--        <router-link class="btn btn-outline-primary" to="/line-manager">A
 import axios from 'axios';
 
 export default {
-  name: "LMScreen",
+  name: "CandidateForm",
   data() {
     return {
       formData: {
