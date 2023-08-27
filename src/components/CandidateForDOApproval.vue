@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Available Candidates List</h1>
+    <!-- <h1 class="text-center">Available Candidates List</h1> -->
     <table class="custom-table">
       <thead>
 
       <th custom-table th>Candidate Name</th>
       <th custom-table th>Candidate Email ID</th>
-      <th>Skills</th>
+      <!-- <th>Skills</th> -->
       <th>Years of Experience</th>
       <!--<th>Years of Experience in Current Domain</th>-->
       <!-- <th>Line Manager</th>
@@ -20,13 +20,13 @@
         <td custom-table td>{{candidate.firstName}} {{candidate.lastName}}</td>
 
         <td>{{candidate.candidateEmailId}}</td>
-        <td>
+        <!-- <td>
           <li v-for="skills in candidate.skillSet" :key="skills">
             {{skills}}
 
           </li>
 
-        </td>
+        </td> -->
         <td>{{candidate.yearsOfExperience}}</td>
         <!--<td>{{candidate.yearOfExperienceInCurrentDomain}}</td>-->
 
@@ -36,8 +36,10 @@
         <!-- <td><button v-on:click="getMatchedCandidates()">Matching Demands</button></td> -->
         <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
         <td>
-          <button class="dark-blue-button" v-on:click="getMatchedCandidates(candidate.candidateId)">Matching Demands</button>
-
+          <button class="dark-blue-button" v-on:click="approve">Approve
+          </button>
+          <button class="dark-blue-button" v-on:click="reject">Reject
+          </button>
         </td>
 
       </tr>
@@ -59,7 +61,12 @@ export default {
 
   },
   methods: {
-    listCandidates(){
+    approve() {
+      alert('Approve Processed. Notification Sent to LM.');
+    }, reject() {
+      alert('Reject Processed. Notification Sent to LM.');
+    },
+    listCandidates() {
       CandidateService.getCandidates().then((response) => {
             this.candidates = response.data;
           }

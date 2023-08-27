@@ -9,7 +9,7 @@
                   Pending Request For Candidates
                 </div>
             </router-link>
-            <router-link to="/do/demands/approve-reject/" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/do/demand/approve-reject/" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
                   Pending Request For Demands
                 </div>
