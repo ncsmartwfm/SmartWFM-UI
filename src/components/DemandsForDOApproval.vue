@@ -17,12 +17,10 @@
                     <td custom-table td>{{demand.desiredYearsOfExperience}}</td>
                     <td custom-table td>{{demand.domain}}</td>
                     <td custom-table td>{{demand.desiredLocation}}</td>
-                  <td custom-table td>
+                  <td>
                     <button class="dark-blue-button"
-                            v-on:click="alert('Approve Processed. Notification Sent to LM.')">Approve
-                    </button> &nbsp;<br>
-                    <button class="dark-blue-button" v-on:click="alert('Reject Processed. Notification Sent to LM.')">Reject
-                    </button>
+                            v-on:click="alert('Approve Processed. Notification Sent to LM.')">Approve</button> &nbsp;<br>
+                    <button class="dark-blue-button" v-on:click="alert('Reject Processed. Notification Sent to LM.')">Reject</button>
                   </td>
                 </tr>
             </tbody>
