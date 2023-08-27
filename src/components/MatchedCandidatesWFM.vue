@@ -14,14 +14,15 @@
                 
             </thead>
             <tbody>
-                <tr v-for="demandCandidateMatch in matchedCandidates" v-bind:key="demandCandidateMatch.Id">
+                <tr v-for="demandCandidateMatch in matchedCandidatesWFM" v-bind:key="demandCandidateMatch.Id">
                     <td custom-table td>{{demandCandidateMatch.firstName}} {{demandCandidateMatch.lastName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectRole}}</td>
                     <td custom-table td>{{demandCandidateMatch.match}}</td>
                     <td v-if="demandCandidateMatch.recommendation" custom-table td>Recommended by LM</td>
                     <td v-else custom-table td>NA</td>
-                    <td custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Send For DO Approval</button></td>
+                    <td v-if="demandCandidateMatch.status == 'WAITING_FOR_DO_APPROVAL'" custom-table td>Sent For DO Approval</td>
+                    <td v-else custom-table td><button class="dark-blue-button" v-on:click="updateDOApprovalStatus(demandCandidateMatch)">Send For DO Approval</button></td>
                 </tr>
             </tbody>
         </table>
@@ -38,7 +39,7 @@ export default {
         //props: ['myprop'],
         data(){
             return {
-                matchedCandidates : []
+                matchedCandidatesWFM : []
             }
             
         },
@@ -47,14 +48,14 @@ export default {
             getMatchedCandidates(){
                 console.log("Test Match"+this.$route.params.myProperty)
                 MatchingCandidatesService.getMatchedCandidate(this.$route.params.myProperty).then((response) => {
-                    this.matchedCandidates = response.data;
+                    this.matchedCandidatesWFM = response.data;
                 }
                 );
             },
-            updateRecommendation(demandCandidateMatch){
+            updateDOApprovalStatus(demandCandidateMatch){
                 console.log(demandCandidateMatch.projectName);
-                RecommendService.updateRecommendation(demandCandidateMatch).then((response) => {
-                this.matchedCandidates = response.data;
+                RecommendService.updateDOApprovalStatus(demandCandidateMatch).then((response) => {
+                this.matchedCandidatesWFM = response.data;
                 
                 }
                 );
