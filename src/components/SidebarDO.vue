@@ -14,6 +14,11 @@
                   Pending Request For Demands
                 </div>
             </router-link>
+            <router-link to="/" active-class="active" tag="button" exact class="side-btn">
+                <div class="link-container">
+                    <left>Sign Out</left>
+                </div>
+            </router-link>
         </div>
     </div>
 </template>
