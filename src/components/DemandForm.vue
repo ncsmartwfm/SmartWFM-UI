@@ -112,5 +112,16 @@ export default {
 .dark-blue-button:hover {
   background-color: rgb(11, 87, 226);
 }
+
+.inner-block {
+    width: 450px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 345px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+
 </style>
 
