@@ -1,12 +1,13 @@
 <template>
+  
   <div class="vue-tempalte">
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
       <div class="container">
-        <img src="./assets/logo.png" alt="Netcracker">
+        <img src="./assets/netcracker-small.png" alt="Netcracker">
       </div>
       <div>
-        <img src="./assets/logo-wfm.png" alt="Netcracker">
+        <img src="./assets/wfm-small.png" alt="Netcracker">
       </div>
     </nav>
     <!-- Main -->
@@ -36,8 +37,8 @@ export default {
 
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 100px;
+  padding: 75px;
   box-sizing: border-box;
 }
 </style>

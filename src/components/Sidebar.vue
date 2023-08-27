@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            Simple Sidebar
+            <center><b>LM/PM Home </b></center>
         </div>
         <div class="menu-items">
             <router-link to="/candidate/add" active-class="active" tag="button" exact class="side-btn">
@@ -113,6 +113,6 @@ export default {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #055063;
+    background-color: rgb(8, 185, 230);
 }
 </style>
