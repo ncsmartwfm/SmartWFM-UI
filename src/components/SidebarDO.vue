@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: 'Sidebar-DO'
+    name: 'SidebarDO'
 }
 </script>
 

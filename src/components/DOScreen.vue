@@ -30,6 +30,6 @@ export default {
 .content {
   background-color: white;
   border-radius: 10px;
-  margin: 6px 6px 6px 0px;
+  margin: 50px 100px 600px 0px;
 }
 </style>

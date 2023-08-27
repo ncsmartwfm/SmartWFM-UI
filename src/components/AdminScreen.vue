@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard">
-      <Sidebar/>
+      <SidebarAdmin/>
       <div class="content">
         <router-view/>
       </div>
@@ -10,11 +10,11 @@
   
   <script>
   
-  import Sidebar from "@/components/SidebarLM.vue";
+  import SidebarLM from "@/components/SidebarLM.vue";
   
   export default {
     name: "AdminScreen",
-    components: {Sidebar}
+    components: {SidebarLM}
   }
   </script>
   
