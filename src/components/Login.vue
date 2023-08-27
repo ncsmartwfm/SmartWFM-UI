@@ -74,11 +74,10 @@ export default {
             await this.$router.push({path: '/domain-owner'});
           }
         } else {
-          alert("Incorrect Email or Password.");
+          alert("Incorrect Email or Password...");
         }
       } catch (error) {
         alert("Server is currently down.. Please retry once it is up !");
-        console.error('API Error:', error);
       }
     }
   }
