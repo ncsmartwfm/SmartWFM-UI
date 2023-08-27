@@ -8,7 +8,6 @@
                 <th>Project Role</th>
                 <th>Desired Years of Experience</th>
                 <th>Domain</th>
-                <th>Location</th>
                 <th>Desired Location</th>
             </thead>
             <tbody>
@@ -18,7 +17,6 @@
                     <td>{{demand.projectRole}}</td>
                     <td>{{demand.desiredYearsOfExperience}}</td>
                     <td>{{demand.domain}}</td>
-                    <td>{{demand.location}}</td>
                     <td>{{demand.desiredLocation}}</td>
                 </tr>
             </tbody>

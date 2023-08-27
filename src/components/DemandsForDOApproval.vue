@@ -7,7 +7,6 @@
                 <th custom-table th>Project Role</th>
                 <th custom-table th>Desired Years of Experience</th>
                 <th custom-table th>Domain</th>
-                <th custom-table th>Location</th>
                 <th custom-table th>Desired Location</th>
                 <th custom-table th>Action</th>
             </thead>
@@ -17,7 +16,6 @@
                     <td custom-table td>{{demand.projectRole}}</td>
                     <td custom-table td>{{demand.desiredYearsOfExperience}}</td>
                     <td custom-table td>{{demand.domain}}</td>
-                    <td custom-table td>{{demand.location}}</td>
                     <td custom-table td>{{demand.desiredLocation}}</td>
                     <td custom-table td><button class="dark-blue-button"
                                                 v-on:click="alert('Approve Processed. Notification Sent to LM.')">Approve
