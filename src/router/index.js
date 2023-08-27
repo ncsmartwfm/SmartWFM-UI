@@ -65,13 +65,13 @@ const routes = [
         name: 'DOScreen',
         component: () => import('../components/DOScreen.vue'),
         children: [{
+            path: '/do/candidate/approve-reject/',
+            name: 'DO-Candidate-Approve-Reject',
+            component: () => import('../components/CandidateForDOApproval.vue')
+        },{
             path: '/do/demand/approve-reject/',
             name: 'DO-Demand-Approve-Reject',
             component: () => import('../components/DemandsForDOApproval.vue')
-        },{
-            path: '/do/candidate/approve-reject/',
-            name: 'DO-Candidate-Approve-Reject',
-            component: () => import('../components/DemandsWFM.vue')
         }]
     }, {
         path: '/admin-user',

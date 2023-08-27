@@ -57,6 +57,16 @@
             <label>City</label>
             <input type="text" class="input-field" v-model="formData.city" required/>
           </div>
+          <div>
+            <label>Select Status</label><br>
+            <select class="input-field" v-model="formData.status">
+              <option v-for="status in statuses" :value="status" :key="status">{{ status }}</option>
+            </select>
+          </div>
+          <div>
+            <label>Upload Resume</label><br>
+            <input type="file" class="input-field" ref="fileInput" accept=".pdf,.doc,.docx" />
+          </div>
           <button class="dark-blue-button" type="submit">Submit</button>
         </form>
       </div>
@@ -69,6 +79,18 @@ import axios from 'axios';
 
 export default {
   name: "CandidateForm",
+  async mounted() {
+    try {
+      //'statuses': ["AVAILABLE", "ALLOCATED", "INTERVIEWED", "APPROVED_BY_DO", "REJECTED_BY_DO", "WAITING_FOR_DO_APPROVAL"]
+      const response = await axios.get('http://10.230.24.183:8080/candidates/statuses');
+      console.log('Response:', response);
+      console.log('Response:', response.data);
+      this.statuses = response.data;
+      this.formData.status = this.statuses[0];
+    } catch (error) {
+      console.error('API Error:', error);
+    }
+  },
   data() {
     return {
       formData: {
@@ -84,8 +106,11 @@ export default {
         'lineManagerName': '',
         'lineManagerEmailId': '',
         'country': '',
-        'city': ''
-      }
+        'city': '',
+        'status': '',
+        'resume':''
+      },
+      'statuses': [] //"AVAILABLE", "ALLOCATED", "INTERVIEWED", "APPROVED_BY_DO", "REJECTED_BY_DO", "WAITING_FOR_DO_APPROVAL"]
     };
   },
   methods: {
@@ -93,11 +118,18 @@ export default {
       try {
         console.log('Form submitted with data:', JSON.stringify(this.formData));
         this.formData.skillSet = this.formData.skillSet.split(',');
+        const fileInput = this.$refs.fileInput;
+        if (!fileInput.files.length) {
+          alert('Please select a file to upload.');
+          return;
+        }
+        this.formData.resume = fileInput.files[0];
+        console.log('Resume Uploaded.', this.formData.resume);
         console.log('Form submitted with data:', JSON.stringify(this.formData));
         const response = await axios.post('http://10.230.24.183:8080/candidates', this.formData);
         console.log('Response:', response);
         if (response.status === 201) {
-          alert ("Record Added Successfully.")
+          alert("Record Added Successfully.")
           await this.$router.push({name: 'candidate'});
         }
       } catch (error) {
