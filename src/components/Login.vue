@@ -7,7 +7,8 @@
           <div class="form-group">
             <label>Email address</label>
             <input type="email" class="form-control form-control-lg" v-model="formData.emailId"/>
-          </div><br>
+          </div>
+          <br>
           <div class="form-group">
             <label>Password</label><br>
             <input type="password" class="form-control form-control-lg" v-model="formData.password"/>
@@ -41,12 +42,13 @@ export default {
         console.log('Response:', response);
         console.log('Response:', response.data);
         if (response.status === 200) {
-          /*if (response.data.includes('LM')) {
-            await this.$router.push({name: 'LMScreen'}); //['LM', 'DO', 'WFM']
+          if (response.data.includes('LM')) {
+            await this.$router.push({name: 'LMScreen'});
+          } else if (response.data.includes('WFM')) {
+            await this.$router.push({path: '/work-force-manager'});
+          } else if (response.data.includes('DO')) {
+            await this.$router.push({path: '/domain-owner'});
           }
-          if (response.data.includes('WFM')) {*/
-            await this.$router.push({path: '/work-force-manager'}); //['LM', 'DO', 'WFM']
-          //}
         } else {
           alert("Incorrect Email or Password.");
         }
