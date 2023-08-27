@@ -1,5 +1,8 @@
 <template>
     <div class="sidebar">
+        <div class="title">
+            <center><b>WFM Home </b></center>
+        </div>
         <div class="menu-items">
             <router-link to="/wfm/candidate/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
