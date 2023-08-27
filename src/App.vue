@@ -4,11 +4,11 @@
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
       <div class="container">
-        <img src="./assets/netcracker-small.png" alt="Netcracker">
+        <img src="./assets/netcracker.png" alt="Netcracker">
       </div>
-      <div>
+      <!-- <div>
         <img src="./assets/wfm-small.png" alt="Netcracker">
-      </div>
+      </div> -->
     </nav>
     <!-- Main -->
     <div class="App">

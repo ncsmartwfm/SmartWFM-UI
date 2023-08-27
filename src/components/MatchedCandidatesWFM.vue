@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <br><br>
         <br>
         <h1 class="text-center">Matched Candidates</h1>
         <table class="custom-table">
