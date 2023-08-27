@@ -2,7 +2,7 @@
     <div class="container">
         <br><br>
         <br>
-        <h1 class="text-center">Matched Candidates</h1>
+        <h1 class="text-center">Matched Demands</h1>
         <table class="custom-table">
             <thead>
                 
