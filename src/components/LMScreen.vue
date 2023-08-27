@@ -24,13 +24,13 @@ export default {
   display: grid;
   grid-template-columns: 1fr 5fr;
   background-color: #08b9e6;
-  height: 100vh;
-  width: 100vw;
+  height: 200vh;
+  width: 98vw;
 }
 
 .content {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  margin: 6px 6px 6px 0px;
+  margin: 50px 100px 150px 0px;
 }
 </style>

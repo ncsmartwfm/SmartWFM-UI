@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="text-center">Demands List</h1>
+        <!-- <h1 class="text-center">Demands List</h1> -->
         <table class="custom-table">
             <thead>                
                 <th custom-table th>Project Name</th>

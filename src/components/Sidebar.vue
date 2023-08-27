@@ -6,27 +6,27 @@
         <div class="menu-items">
             <router-link to="/candidate/add" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  Add Available Candidate
+                  <left>Add Available Candidate</left>
                 </div>
             </router-link>
             <router-link to="/candidate/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  View Added Candidates
+                  <left>View Added Candidates</left>
                 </div>
             </router-link>
             <router-link to="/demand/add" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  Add Demand
+                    <left>Add Demand</left>
                 </div>
             </router-link>
             <router-link to="/demand/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  View Added Demands
+                    <left>View Added Demands</left>
                 </div>
             </router-link>
           <router-link to="/" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  Sign Out
+                    <left>Sign Out</left>
                 </div>
             </router-link>
         </div>

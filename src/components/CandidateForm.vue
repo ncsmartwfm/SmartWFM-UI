@@ -2,7 +2,7 @@
   <div class="vertical-center">
     <div class="inner-block">
       <div class="vue-tempalte">
-        <h3>Add Candidate</h3>
+        <!-- <h3>Add Candidate</h3> -->
         <form @submit.prevent="submitForm">
           <div class="form-group">
             <label>Candidate NC ID</label>
