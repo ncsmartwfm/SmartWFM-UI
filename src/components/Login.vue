@@ -6,12 +6,19 @@
           <h3>Sign In</h3>
           <div class="form-group">
             <label>Email address</label>
-            <input type="email" class="form-control form-control-lg" v-model="formData.emailId"/>
+            <input type="email" class="form-control form-control-lg" v-model="formData.emailId" @blur="fetchData"/>
           </div>
           <br>
           <div class="form-group">
             <label>Password</label><br>
             <input type="password" class="form-control form-control-lg" v-model="formData.password"/>
+          </div>
+          <br>
+          <div class="form-group" v-if="formData.roles.length>1">
+            <label>Select Role</label><br>
+            <select class="form-control form-control-lg" v-model="formData.selectedRole">
+              <option v-for="role in formData.roles" :value="role" :key="role">{{ role }}</option>
+            </select>
           </div>
           <br>
           <button class="dark-blue-button" type="submit">Submit
@@ -30,11 +37,28 @@ export default {
     return {
       formData: {
         'emailId': '',
-        'password': ''
+        'password': '',
+        'roles': [''],
+        'selectedRole': ''
       },
     }
   },
   methods: {
+    async fetchData() {
+      if (this.formData.emailId) {
+        try {
+          //const response = {'data': ['LM', 'DO','WFM']};
+          const response = await axios.get('http://10.230.24.183:8080/user?emailId=' + this.formData.emailId);
+          console.log('Response:', response);
+          console.log('Response:', response.data);
+          this.formData.roles = response.data.roles;
+          this.formData.selectedRole = this.formData.roles[0];
+        } catch (error) {
+          console.error('API Error:', error);
+        }
+      }
+    }
+    ,
     async submitForm() {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       try {
@@ -42,11 +66,11 @@ export default {
         console.log('Response:', response);
         console.log('Response:', response.data);
         if (response.status === 200) {
-          if (response.data.includes('LM')) {
+          if (this.formData.selectedRole === 'LM') {
             await this.$router.push({name: 'LMScreen'});
-          } else if (response.data.includes('WFM')) {
+          } else if (this.formData.selectedRole === 'WFM') {
             await this.$router.push({path: '/work-force-manager'});
-          } else if (response.data.includes('DO')) {
+          } else if (this.formData.selectedRole === 'DO') {
             await this.$router.push({path: '/domain-owner'});
           }
         } else {
