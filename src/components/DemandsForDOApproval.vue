@@ -20,7 +20,7 @@
                   <td custom-table td>
                     <button class="dark-blue-button"
                             v-on:click="alert('Approve Processed. Notification Sent to LM.')">Approve
-                    </button>
+                    </button> &nbsp;<br>
                     <button class="dark-blue-button" v-on:click="alert('Reject Processed. Notification Sent to LM.')">Reject
                     </button>
                   </td>

@@ -37,7 +37,7 @@
         <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
         <td>
           <button class="dark-blue-button" v-on:click="approve(candidate)">Approve
-          </button>
+          </button>&nbsp;
           <button class="dark-blue-button" v-on:click="reject(candidate)">Reject
           </button>
         </td>

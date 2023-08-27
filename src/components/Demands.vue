@@ -17,7 +17,10 @@
                     <td custom-table td>{{demand.projectRole}}</td>
                     <td custom-table td>{{demand.desiredYearsOfExperience}}</td>
                     <td custom-table td>{{demand.domain}}</td>
-                    <td custom-table td>{{demand.desiredLocation}}</td>
+                    <td custom-table td>
+                    <li v-for="location in demand.desiredLocations" :key="location">      
+                              {{location}}
+                    </li></td>
                     <td custom-table td><button class="dark-blue-button" v-on:click="getMatchedCandidates(demand.demandId)">Matching Candidates</button></td>
                 </tr>
             </tbody>
