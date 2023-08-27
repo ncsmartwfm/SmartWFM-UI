@@ -10,11 +10,11 @@
 
 <script>
 
-import Sidebar from "@/components/Sidebar.vue";
+import SidebarLM from "@/components/SidebarLM.vue";
 
 export default {
   name: "LMScreen",
-  components: {Sidebar}
+  components: {SidebarLM}
 }
 </script>
 
