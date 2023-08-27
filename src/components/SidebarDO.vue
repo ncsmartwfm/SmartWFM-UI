@@ -4,12 +4,12 @@
             <center><b>DO Home </b></center>
         </div>
         <div class="menu-items">
-            <router-link to="/candidate/add" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/do/candidate/approve-reject/" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
                   Pending Request For Candidates
                 </div>
             </router-link>
-            <router-link to="/candidate/view" active-class="active" tag="button" exact class="side-btn">
+            <router-link to="/do/demands/approve-reject/" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
                   Pending Request For Demands
                 </div>
