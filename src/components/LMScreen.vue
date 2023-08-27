@@ -31,6 +31,6 @@ export default {
 .content {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  margin: 50px 100px 150px 0px;
+  margin: 50px 100px 700px 0px;
 }
 </style>
