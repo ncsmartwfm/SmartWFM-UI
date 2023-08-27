@@ -10,11 +10,11 @@
   
   <script>
   
-  import SidebarLM from "@/components/SidebarLM.vue";
+  import SidebarAdmin from "@/components/SidebarAdmin.vue";
   
   export default {
     name: "AdminScreen",
-    components: {SidebarLM}
+    components: {SidebarAdmin}
   }
   </script>
   

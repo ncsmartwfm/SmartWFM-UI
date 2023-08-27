@@ -47,7 +47,7 @@
     methods: {
       async submitForm() {
         console.log('Form submitted with data:', JSON.stringify(this.formData));
-        this.formData.roles = this.formData.desiredSkillSet.split(',');        
+        this.formData.roles = this.formData.roles.split(',');        
         console.log('Form submitted with data:', JSON.stringify(this.formData));
         const response = await axios.post('http://10.230.24.183:8080/users', this.formData);
         console.log('Response:', response.data);
