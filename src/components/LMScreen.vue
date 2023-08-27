@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <Sidebar/>
+    <SidebarLM/>
     <div class="content">
       <router-view/>
     </div>

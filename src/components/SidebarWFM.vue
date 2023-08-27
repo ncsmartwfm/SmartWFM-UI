@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebarWFM">
         <div class="title">
             <center><b>WFM Home</b></center>
         </div>
