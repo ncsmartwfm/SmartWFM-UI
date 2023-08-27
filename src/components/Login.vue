@@ -72,6 +72,8 @@ export default {
             await this.$router.push({path: '/work-force-manager'});
           } else if (this.formData.selectedRole === 'DO') {
             await this.$router.push({path: '/domain-owner'});
+          } else if (this.formData.selectedRole === 'ADMIN') {
+            await this.$router.push({path: '/admin-user'});
           }
         } else {
           alert("Incorrect Email or Password...");
