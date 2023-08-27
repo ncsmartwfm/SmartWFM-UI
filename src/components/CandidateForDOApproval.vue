@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Available Candidates List</h1>
+    <!-- <h1 class="text-center">Available Candidates List</h1> -->
     <table class="custom-table">
       <thead>
 
       <th custom-table th>Candidate Name</th>
       <th custom-table th>Candidate Email ID</th>
-      <th>Skills</th>
+      <!-- <th>Skills</th> -->
       <th>Years of Experience</th>
       <!--<th>Years of Experience in Current Domain</th>-->
       <!-- <th>Line Manager</th>
@@ -17,17 +17,17 @@
       </thead>
       <tbody>
       <tr v-for="candidate in candidates" v-bind:key="candidate.id">
-        <td custom-table td>{{candidate.firstName}} {{candidate.lastName}}</td>
+        <td custom-table td>{{ candidate.firstName }} {{ candidate.lastName }}</td>
 
-        <td>{{candidate.candidateEmailId}}</td>
-        <td>
+        <td>{{ candidate.candidateEmailId }}</td>
+        <!-- <td>
           <li v-for="skills in candidate.skillSet" :key="skills">
             {{skills}}
 
           </li>
 
-        </td>
-        <td>{{candidate.yearsOfExperience}}</td>
+        </td> -->
+        <td>{{ candidate.yearsOfExperience }}</td>
         <!--<td>{{candidate.yearOfExperienceInCurrentDomain}}</td>-->
 
 
@@ -36,8 +36,10 @@
         <!-- <td><button v-on:click="getMatchedCandidates()">Matching Demands</button></td> -->
         <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
         <td>
-          <button class="dark-blue-button" v-on:click="getMatchedCandidates(candidate.candidateId)">Matching Demands</button>
-
+          <button class="dark-blue-button" v-on:click="approve(candidate)">Approve
+          </button>
+          <button class="dark-blue-button" v-on:click="reject(candidate)">Reject
+          </button>
         </td>
 
       </tr>
@@ -49,23 +51,56 @@
 <script type="module">
 import CandidateService from '../services/CandidateService'
 import MatchingCandidatesService from '../services/MatchingCandidatesService'
+import axios from "axios";
+
 export default {
   name: 'Candidate-DO-component',
   props: ['myprop'],
-  data(){
+  data() {
     return {
-      candidates : []
+      candidates: [],
+      formData: {
+        'candidateId': '',
+        'firstName': '',
+        'lastName': '',
+        'demandId': '',
+        'projectName': '',
+        'projectRole': '',
+        'match': 0,
+        'recommendation': true,
+        'status': ''
+      }
     }
 
   },
   methods: {
-    listCandidates(){
+    async approve(candidate) {
+      try {
+        console.log('Candidate submitted with data:', candidate);
+        const response = await axios.put('http://10.230.24.183:8080/candidate/approvedbyDO', candidate);
+        console.log('Response:', response);
+      } catch (error) {
+        console.error('API Error:', error);
+      }
+      alert('Approve Processed. Notification Sent to LM.');
+    }, async reject(candidate) {
+      try {
+        console.log('Candidate submitted with data:', candidate);
+        const response = await axios.put('http://10.230.24.183:8080/candidate/approvedbyDO', candidate);
+        console.log('Response:', response);
+      } catch (error) {
+        console.error('API Error:', error);
+      }
+      alert('Reject Processed. Notification Sent to LM.');
+
+    },
+    listCandidates() {
       CandidateService.getCandidates().then((response) => {
             this.candidates = response.data;
           }
       );
     },
-    getMatchedCandidates(id){
+    getMatchedCandidates(id) {
       //console.log("Test Match"+id)
       //MatchingCandidateService.getMatchedCandidates().then((response) => {
       //  this.candidates = response.data;
@@ -97,9 +132,11 @@ export default {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
+
 .dark-blue-button:hover {
   background-color: rgb(11, 87, 226);
 }
+
 /* Style for the table container */
 .table-container {
   display: flex;
