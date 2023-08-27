@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            <center><b>DO Home </b></center>
+            <center><b>DO Home</b></center>
         </div>
         <div class="menu-items">
             <router-link to="/do/candidate/approve-reject/" active-class="active" tag="button" exact class="side-btn">

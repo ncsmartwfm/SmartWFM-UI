@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="text-center">Matched Demands Meter</h1>
+        <h1 class="text-center">Matched Demands</h1>
         <table class="table table-striped">
             <thead>
                 

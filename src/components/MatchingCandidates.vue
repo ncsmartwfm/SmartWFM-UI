@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="text-center">Available Matching Candidates List</h1>
+        <h1 class="text-center">Available Matching Candidates</h1>
         <table class="table table-striped">
             <thead>
                 <th>Candidate ID</th>
