@@ -1,34 +1,4 @@
 <template>
-    <div class="container">
-        <!-- <h1 class="text-center">Available Candidates List</h1> -->
-        <table class="custom-table">
-            <thead>
-                
-                <th custom-table th>Candidate Name</th>                
-                <th custom-table th>Candidate Email ID</th>
-                <!--<th>Years of Experience</th>
-                <th>Years of Experience in Current Domain</th>-->
-                <!-- <th>Line Manager</th>
-                <th>Line Manager Email Id</th>                
-                <th>Country</th>
-                <th>City</th> -->
-                <th custom-table th>Action</th>
-            </thead>
-            <tbody>
-                <tr v-for="candidate in candidates" v-bind:key="candidate.id">
-                    <td custom-table td>{{candidate.firstName}} {{candidate.lastName}}</td>                    
-                    
-                    <td>{{candidate.candidateEmailId}}</td>
-                    <!--<td>{{candidate.yearsOfExperience}}</td>
-                    <td>{{candidate.yearOfExperienceInCurrentDomain}}</td>-->
-                    
-                                       
-                    <!-- <td>{{candidate.country}}</td>
-                    <td>{{candidate.city}}</td> -->
-                    <!-- <td><button v-on:click="getMatchedCandidates()">Matching Demands</button></td> -->
-                    <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
-                    <td>
-                        <button class="dark-blue-button" v-on:click="getMatchedCandidates(candidate.candidateId)">Matching Demands</button>
   <div class="container">
     <h1 class="text-center">Available Candidates List</h1>
     <table class="custom-table">
