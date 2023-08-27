@@ -22,7 +22,7 @@
                     <td custom-table td>{{demandCandidateMatch.match}}</td>
                     <td v-if="demandCandidateMatch.recommendation" custom-table td>Recommended by LM</td>
                     <td v-else custom-table td>NA</td>
-                    <td v-if="demandCandidateMatch.status == 'WAITING_FOR_DO_APPROVAL'" custom-table td>Sent For DO Approval</td>
+                    <td v-if="demandCandidateMatch.status == 'WAITING_FOR_DO_APPROVAL'" custom-table td>Waiting for DO Approval</td>
                     <td v-else custom-table td><button class="dark-blue-button" v-on:click="updateDOApprovalStatus(demandCandidateMatch)">Send For DO Approval</button></td>
                 </tr>
             </tbody>
