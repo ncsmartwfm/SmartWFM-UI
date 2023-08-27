@@ -37,7 +37,7 @@ export default {
     async submitForm() {
       console.log('Form submitted with data:', JSON.stringify(this.formData));
       try {
-        const response = await axios.get('http://localhost:8080/users?emailId=' + this.formData.emailId + '&password=' + this.formData.password);
+        const response = await axios.get('http://10.230.24.183:8080/users?emailId=' + this.formData.emailId + '&password=' + this.formData.password);
         console.log('Response:', response);
         console.log('Response:', response.data);
         if (response.status === 200) {
@@ -86,7 +86,7 @@ export default {
 }
 
 .dark-blue-button {
-  background-color: rgb(3, 104, 129);
+  background-color: rgb(6, 58, 71);
   color: white;
   padding: 10px 20px;
   border: none;
