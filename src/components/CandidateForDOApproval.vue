@@ -79,19 +79,20 @@ export default {
         console.log('Candidate submitted with data:', candidate);
         const response = await axios.put('http://10.230.24.183:8080/candidate/approvedbyDO', candidate);
         console.log('Response:', response);
-        alert('Approve Processed. Notification Sent to LM.');
       } catch (error) {
         console.error('API Error:', error);
       }
+      alert('Approve Processed. Notification Sent to LM.');
     }, async reject(candidate) {
       try {
         console.log('Candidate submitted with data:', candidate);
         const response = await axios.put('http://10.230.24.183:8080/candidate/approvedbyDO', candidate);
         console.log('Response:', response);
-        alert('Reject Processed. Notification Sent to LM.');
       } catch (error) {
         console.error('API Error:', error);
       }
+      alert('Reject Processed. Notification Sent to LM.');
+
     },
     listCandidates() {
       CandidateService.getCandidates().then((response) => {
