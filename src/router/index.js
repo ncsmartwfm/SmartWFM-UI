@@ -55,6 +55,10 @@ const routes = [
             path: '/wfm/demand/view/',
             name: 'WFM-Demand-View',
             component: () => import('../components/DemandsWFM.vue')
+        },{
+            path: '/matchedcandidatesWFM',
+            name: 'matchedcandidatesWFM',
+            component: () => import('../components/MatchedCandidatesWFM.vue')
         }]
     }, {
         path: '/admin-user',

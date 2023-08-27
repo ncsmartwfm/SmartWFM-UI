@@ -28,7 +28,7 @@
         <!-- <td><button v-on:click="getMatchedCandidates()">Matching Demands</button></td> -->
         <!--<router-link class="btn btn-outline-primary" to="/matchedcandidates">Matching Demands</router-link>-->
         <td>
-          <button class="dark-blue-button" v-on:click="getMatchedCandidates(candidate.candidateId)">View Recommended Demands</button>
+          <button class="dark-blue-button" v-on:click="getMatchedCandidatesWFM(candidate.candidateId)">View Recommended Demands</button>
 
         </td>
 
@@ -57,7 +57,7 @@ export default {
           }
       );
     },
-    getMatchedCandidates(id){
+    getMatchedCandidatesWFM(id){
       //console.log("Test Match"+id)
       //MatchingCandidateService.getMatchedCandidates().then((response) => {
       //  this.candidates = response.data;
@@ -66,7 +66,7 @@ export default {
       //myprop = id;
       //this.$router.replace({name:'matchedcandidates', params:{myprop}});
       this.$router.push({
-        name: 'matchedcandidates',
+        name: 'matchedcandidatesWFM',
         params: {myProperty: id}
       })
     }

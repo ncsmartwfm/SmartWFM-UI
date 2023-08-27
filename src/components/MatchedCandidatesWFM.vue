@@ -9,7 +9,8 @@
                 <th custom-table th>Project Name</th>
                 <th custom-table th>Project Role</th>
                 <th custom-table th>Match Percentage</th>
-                <th custom-table th>Recommendation</th>
+                <th custom-table th>LM Recommendation</th>
+                <th custom-table th>Action</th>
                 
             </thead>
             <tbody>
@@ -18,8 +19,9 @@
                     <td custom-table td>{{demandCandidateMatch.projectName}}</td>
                     <td custom-table td>{{demandCandidateMatch.projectRole}}</td>
                     <td custom-table td>{{demandCandidateMatch.match}}</td>
-                    <td v-if="demandCandidateMatch.recommendation" custom-table td>Recommended</td>
-                    <td v-else custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Recommend</button></td>
+                    <td v-if="demandCandidateMatch.recommendation" custom-table td>Recommended by LM</td>
+                    <td v-else custom-table td>NA</td>
+                    <td custom-table td><button class="dark-blue-button" v-on:click="updateRecommendation(demandCandidateMatch)">Send For DO Approval</button></td>
                 </tr>
             </tbody>
         </table>
@@ -32,7 +34,7 @@ import MatchingCandidatesService from '../services/MatchingCandidatesService'
 import RecommendService from '../services/LM/RecommendService'
 //recommend = false
 export default {
-        name: 'MatchedCandidate-component',
+        name: 'MatchedCandidateWFM-component',
         //props: ['myprop'],
         data(){
             return {
