@@ -1,32 +1,14 @@
 <template>
     <div class="sidebar">
-        <div class="title">
-            Simple Sidebar
-        </div>
         <div class="menu-items">
             <router-link to="/candidate/add" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  Add Available Candidate
+                  Pending Request For Candidates
                 </div>
             </router-link>
             <router-link to="/candidate/view" active-class="active" tag="button" exact class="side-btn">
                 <div class="link-container">
-                  View Added Candidates
-                </div>
-            </router-link>
-            <router-link to="/demand/add" active-class="active" tag="button" exact class="side-btn">
-                <div class="link-container">
-                  Add Demand
-                </div>
-            </router-link>
-            <router-link to="/demand/view" active-class="active" tag="button" exact class="side-btn">
-                <div class="link-container">
-                  View Added Demands
-                </div>
-            </router-link>
-          <router-link to="/" active-class="active" tag="button" exact class="side-btn">
-                <div class="link-container">
-                  Sign Out
+                  Pending Request For Demands
                 </div>
             </router-link>
         </div>
@@ -35,7 +17,7 @@
 
 <script>
 export default {
-    name: 'Sidebar-component'
+    name: 'Sidebar-DO'
 }
 </script>
 
