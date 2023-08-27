@@ -77,7 +77,7 @@ export default {
           alert("Incorrect Email or Password.");
         }
       } catch (error) {
-        alert("Incorrect Email or Password.");
+        alert("Server is currently down.. Please retry once it is up !");
         console.error('API Error:', error);
       }
     }

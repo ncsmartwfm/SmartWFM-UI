@@ -3,8 +3,9 @@
   <div class="vue-tempalte">
     <!-- Navigation -->
     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
+      <img src="./assets/netcracker-1.png" alt="Netcracker">
       <div class="container">
-        <img src="./assets/netcracker.png" alt="Netcracker">
+        <!-- <img src="./assets/netcracker-1.png" alt="Netcracker"> -->
       </div>
       <!-- <div>
         <img src="./assets/wfm-small.png" alt="Netcracker">
