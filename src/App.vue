@@ -39,7 +39,7 @@ export default {
 
 body {
   margin: 100px;
-  padding: 75px;
+  padding: 100px;
   box-sizing: border-box;
 }
 </style>
