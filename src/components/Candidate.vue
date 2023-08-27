@@ -6,7 +6,7 @@
 
       <th custom-table th>Candidate Name</th>
       <th custom-table th>Candidate Email ID</th>
-      <th>Skills</th>
+      <!-- <th>Skills</th> -->
       <th>Years of Experience</th>
       <!--<th>Years of Experience in Current Domain</th>-->
       <!-- <th>Line Manager</th>
@@ -20,13 +20,13 @@
         <td custom-table td>{{candidate.firstName}} {{candidate.lastName}}</td>
 
         <td>{{candidate.candidateEmailId}}</td>
-        <td>
+        <!-- <td>
           <li v-for="skills in candidate.skillSet" :key="skills">
             {{skills}}
 
           </li>
 
-        </td>
+        </td> -->
         <td>{{candidate.yearsOfExperience}}</td>
         <!--<td>{{candidate.yearOfExperienceInCurrentDomain}}</td>-->
 
