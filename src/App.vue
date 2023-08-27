@@ -5,6 +5,9 @@
       <div class="container">
         <img src="./assets/logo.png" alt="Netcracker">
       </div>
+      <div>
+        <img src="./assets/logo-wfm.png" alt="Netcracker">
+      </div>
     </nav>
     <!-- Main -->
     <div class="App">

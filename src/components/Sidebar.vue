@@ -113,6 +113,6 @@ export default {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #08b9e6;
+    background-color: #055063;
 }
 </style>
